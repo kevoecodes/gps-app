@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MapsActivity" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:padding="10dp"
+        android:layout_alignParentTop="true">
+
+        <AutoCompleteTextView
+            android:id="@+id/searchField"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_search_field"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:padding="16dp"
+            android:hint="@string/search_hint"
+            android:drawableStart="@drawable/location_pin"
+            android:drawablePadding="8dp"
+            android:inputType="text" />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp">
+
+        <ImageButton
+            android:id="@+id/currentLocationButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/target_icon"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/rounded_button"
+            android:padding="10dp"
+            android:layout_marginBottom="16dp" />
+
+        <ImageButton
+            android:id="@+id/directionsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/direction_icon"
+            android:padding="10dp"
+            android:background="@drawable/primary_button"
+            android:layout_below="@id/currentLocationButton"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="16dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
